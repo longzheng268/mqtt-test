@@ -1,0 +1,9 @@
+[package]
+name = "mqtt-test"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+rumqttc = { version = "0.25.1", features = ["websocket"] }
+eframe = "0.34"
+tokio = { version = "1", features = ["full"] }
