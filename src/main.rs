@@ -2,6 +2,8 @@
 
 mod mqtt_client;
 
+use std::sync::Arc;
+
 use eframe::egui::{self, Color32, RichText};
 use mqtt_client::{MqttLog, MqttManager, TransportType};
 use rumqttc::QoS;
@@ -37,7 +39,7 @@ fn setup_fonts(ctx: &egui::Context) {
     if !font_data.is_empty() {
         fonts
             .font_data
-            .insert("MiSans".to_string(), egui::FontData::from_owned(font_data));
+            .insert("MiSans".to_string(), Arc::new(egui::FontData::from_owned(font_data)));
         fonts
             .families
             .entry(egui::FontFamily::Proportional)
