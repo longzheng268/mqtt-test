@@ -2,6 +2,8 @@
 
 基于 Rust + egui 的本地 GUI MQTT 客户端，支持 TCP 和 WebSocket 两种连接方式。
 
+![界面截图](resources/screens/default_status_display.png)
+
 ## 功能
 
 - TCP (1883) / WebSocket (9001) 双协议连接
